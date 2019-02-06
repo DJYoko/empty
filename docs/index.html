@@ -2,22 +2,52 @@
 <html>
 
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!--[if lt IE 9]>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>empty method on Javascript</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!--[if lt IE 9]>
     <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>    <![endif]-->
 </head>
 
 <body>
-<div id="wrapper">
-</div>
+	<div class="container">
+		<h1>empty</h1>
+		<p>try to input follow command n console.</p>
+		<label>empty("");</label>
+		<label>empty(0);</label>
+		<label>empty(0.0);</label>
+		<label>empty("0");</label>
+		<label>empty(null);</label>
+		<label>empty(false);</label>
+		<label>empty([]);</label>
+		<hr>
+		<p>this is same result of <strong>'empty'</strong> method on PHP.</p>
+		<hr>
+		<h2>source</h2>
+		<pre id="source"></pre>
+	</div>
+
 </body>
 <script src="empty.js"></script>
+<script>
+	$(function() {
+		$('#source').load('empty.js');
+	});
+</script>
+<style>
+	label {
+		background-color: rgba(27, 31, 35, .05);
+		border-radius: 3px;
+		font-size: 85%;
+		margin: 0;
+		padding: .2em .4em;
+	}
+</style>
+
 </html>
