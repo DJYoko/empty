@@ -6,7 +6,7 @@ const empty = (arg) => {
 
 	const TYPE_CASES = {};
 	TYPE_CASES['boolean'] = (_arg) => {
-		return _arg === false;;
+		return _arg === false;
 	}
 	TYPE_CASES['number'] = (_arg) => {
 		return _arg === 0;
