@@ -2,8 +2,6 @@ const empty = (arg) => {
 	const type = typeof arg;
 	if (type === 'undefined') {
 		return undefined;
-	} else if (type !== 'boolean' || type !== 'number' || type !== 'object' || type !== 'string') {
-		return undefined;
 	}
 
 	const TYPE_CASES = {};
@@ -18,6 +16,10 @@ const empty = (arg) => {
 	}
 	TYPE_CASES['string'] = (_arg) => {
 		return _arg === '' || _arg === '0';
+	}
+	
+	if (typeof TYPE_CASES[type] === 'undefined') {
+		return undefined;
 	}
 
 	return TYPE_CASES[type](arg);
