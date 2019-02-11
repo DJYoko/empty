@@ -13,6 +13,11 @@
 	<!--[if lt IE 9]>
     <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>    <![endif]-->
+
+	<!-- mocha -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.2.5/mocha.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.0.0/chai.min.js"></script>
+
 </head>
 
 <body>
@@ -28,11 +33,14 @@
 		<label>empty([]);</label>
 		<hr>
 		<p>they show same result of <strong>'empty'</strong> method on PHP.</p>
+		<p>github: <a href="https://github.com/DJYoko/empty" target="_blank">https://github.com/DJYoko/empty</a></p>
 		<hr>
 		<h2>source</h2>
 		<p>empty.js</p>
 		<pre id="source"></pre>
-		<p>github: <a href="https://github.com/DJYoko/empty" target="_blank">https://github.com/DJYoko/empty</a></p>
+		<hr>
+		<h2>mocha test</h2>
+		<div id="mocha"></div>
 	</div>
 
 </body>
@@ -42,6 +50,15 @@
 		$('#source').load('empty.js');
 	});
 </script>
+	
+	<script>
+		mocha.setup('bdd');
+	</script>
+	<script src="test.js"></script>
+	<script>
+		mocha.checkLeaks();
+		mocha.run();
+	</script>
 <style>
 	label {
 		background-color: rgba(27, 31, 35, .05);
